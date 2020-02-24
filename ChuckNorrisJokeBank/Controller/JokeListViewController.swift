@@ -17,6 +17,7 @@ class JokeListViewController: UIViewController {
     }
     
     @IBAction func okButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

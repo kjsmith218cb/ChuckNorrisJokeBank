@@ -18,12 +18,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+                
+                // Make welcome picture display as a circle
+        //        welcomeImage.layer.borderWidth = 1
+        //        welcomeImage.layer.masksToBounds = false
+        //        welcomeImage.layer.borderColor = UIColor.black.cgColor
+        //        welcomeImage.layer.cornerRadius = welcomePicture.frame.width/2
+                welcomeImage.layer.cornerRadius = 100
+                welcomeImage.clipsToBounds = true
+                
+                // Add a shadow to welcome picture
+                welcomeImage.layer.shadowColor = UIColor.black.cgColor
+                welcomeImage.layer.shadowOpacity = 1
+                welcomeImage.layer.shadowOffset = .zero
+                welcomeImage.layer.shadowRadius = 10
+                welcomeImage.layer.shadowPath = UIBezierPath(rect: welcomeImage.bounds).cgPath
+                welcomeImage.layer.shouldRasterize = true
+                
+                // Style buttons
+                randomJokeButton.layer.cornerRadius = 20
+                jokeListButton.layer.cornerRadius = 20
+                unknownButton.layer.cornerRadius = 20
+                unknownButton.layer.borderWidth = 2
+                unknownButton.layer.borderColor = UIColor(red: 5/255, green: 46/255, blue: 104/255, alpha: 1.0).cgColor
+
     }
 
     @IBAction func randomJokeButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToSingle", sender: self)
     }
     
     @IBAction func jokeListButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToList", sender: self)
     }
     
     @IBAction func unknownButtonPressed(_ sender: UIButton) {
