@@ -12,14 +12,19 @@ class JokeListViewController: UIViewController {
     
     let randomJoke = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10"]
     
-    @IBAction func okButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-
+    @IBOutlet weak var okButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        // Style buttons
+        okButton.layer.cornerRadius = 20
+
+    }
+    
+    @IBAction func okButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
