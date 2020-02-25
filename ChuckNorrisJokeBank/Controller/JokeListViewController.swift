@@ -34,17 +34,17 @@ class JokeListViewController: UIViewController, RandomJokeManagerDelegate {
         okButton.layer.cornerRadius = 20
         
         retrieveJokes()
-
+        
     }
     
     //Pull Down Refresh
     @objc func refresh(_ sender: Any) {
         retrieveJokes()
-        
+
         // Stop Spinner
         refreshControl.endRefreshing()
     }
-    
+
     func retrieveJokes() {
         // Loop to get 10 random jokes
         for _ in 1...2 {
@@ -96,6 +96,13 @@ extension JokeListViewController: UITableViewDataSource {
         cell.configureJoke(randomJoke: randomJokeArray[indexPath.row])
         
         return cell
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("TEST")
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        print("offsetY: \(offsetY) | contentHeight: \(contentHeight)")
     }
     
 }
