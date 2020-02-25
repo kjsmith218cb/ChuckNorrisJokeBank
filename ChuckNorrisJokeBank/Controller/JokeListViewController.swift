@@ -10,7 +10,8 @@ import UIKit
 
 class JokeListViewController: UIViewController {
     
-    let randomJoke = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10"]
+    let randomJoke = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10",
+                    "Joke 11", "Joke 12", "Joke 13", "Joke 14", "Joke 15", "Joke 16", "Joke 17", "Joke 18", "Joke 19", "Joke 20"]
     
     @IBOutlet weak var okButton: UIButton!
     
@@ -33,7 +34,7 @@ extension JokeListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return randomJoke.count
-        return 10
+        return randomJoke.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
