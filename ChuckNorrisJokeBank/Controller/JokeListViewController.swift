@@ -8,13 +8,14 @@
 
 import UIKit
 
-class JokeListViewController: UIViewController, RandomJokeManagerDelegate {
-    
-//    var randomJokeArray = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10"]
-    var randomJokeArray = [String]()
+class JokeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RandomJokeManagerDelegate {
     
     var randomJokeManager = RandomJokeManager()
     var refreshControl: UIRefreshControl!
+    
+    var fetchingMore = false
+//    var randomJokeArray = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10"]
+    var randomJokeArray = [String]()
     
     @IBOutlet weak var jokeTableView: UITableView!
     @IBOutlet weak var okButton: UIButton!
@@ -23,35 +24,38 @@ class JokeListViewController: UIViewController, RandomJokeManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //Pull Down Refresh
-        refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        jokeTableView.addSubview(refreshControl)
-        
         randomJokeManager.delegate = self
+        
+        jokeTableView.delegate = self
+        jokeTableView.dataSource = self
         
         // Style buttons
         okButton.layer.cornerRadius = 20
         
-        retrieveJokes()
+//        retrieveJokes()
+//        jokeTableView.reloadData()
+        
+//        //Pull Down Refresh NOT REQUIRED - PAGINATION!!
+//        refreshControl = UIRefreshControl()
+//        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+//        jokeTableView.addSubview(refreshControl)
         
     }
     
-    //Pull Down Refresh
-    @objc func refresh(_ sender: Any) {
-        retrieveJokes()
-
-        // Stop Spinner
-        refreshControl.endRefreshing()
-    }
+//    //Pull Down Refresh NOT REQUIRED - PAGINATION!!
+//    @objc func refresh(_ sender: Any) {
+//        retrieveJokes()
+//
+//        // Stop Spinner
+//        refreshControl.endRefreshing()
+//    }
 
     func retrieveJokes() {
         // Loop to get 10 random jokes
-        for _ in 1...2 {
+        for _ in 1...10 {
             // Fetch random joke
             randomJokeManager.fetchRandomJoke()
         }
-        jokeTableView.reloadData()
     }
     
     func didUpdateRandomJoke(_ randomJokeManager: RandomJokeManager, randomJoke: String) {
@@ -80,29 +84,38 @@ class JokeListViewController: UIViewController, RandomJokeManagerDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-}
-
-extension JokeListViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return randomJokeArray.count
+            return randomJokeArray.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell()
-//        cell.textLabel?.text = randomJoke[indexPath.row]
         
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! JokeCell
         cell.configureJoke(randomJoke: randomJokeArray[indexPath.row])
-        
+            
         return cell
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("TEST")
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-        print("offsetY: \(offsetY) | contentHeight: \(contentHeight)")
+//        print("offsetY: \(offsetY) | contentHeight: \(contentHeight)")
+            
+        if offsetY > contentHeight - scrollView.frame.height {
+            if !fetchingMore {
+                beginBatchFetch()
+            }
+        }
+    }
+    
+    func beginBatchFetch() {
+        fetchingMore = true
+        print("Begin Batch Fetch")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            self.retrieveJokes()
+            self.fetchingMore = false
+            self.jokeTableView.reloadData()
+        })
     }
     
 }

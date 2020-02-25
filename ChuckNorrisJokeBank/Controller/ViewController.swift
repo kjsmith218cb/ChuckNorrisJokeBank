@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var jokeListButton: UIButton!
     @IBOutlet weak var unknownButton: UIButton!
     
+    var buttonCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,6 +55,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unknownButtonPressed(_ sender: UIButton) {
+        buttonCount += 1
+        print(buttonCount)
+        if (buttonCount == 5) {
+            print("YOU GOT THE JOB SCREEN")
+        }
     }
     
 }
