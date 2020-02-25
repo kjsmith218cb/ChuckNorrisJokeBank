@@ -106,18 +106,35 @@
                                 <rect key="frame" x="32" y="49" width="350" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19N-ty-wla">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19N-ty-wla">
                                 <rect key="frame" x="32" y="157" width="350" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="Xcp-5u-L4S">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="Xcp-5u-L4S" customClass="JokeCell" customModule="ChuckNorrisJokeBank" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="350" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xcp-5u-L4S" id="9Tm-0v-e8i">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heH-dA-xRu">
+                                                    <rect key="frame" x="20" y="20" width="0.0" height="60"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.017911188299999999" green="0.18192347880000001" blue="0.4064105153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="heH-dA-xRu" firstAttribute="leading" secondItem="9Tm-0v-e8i" secondAttribute="leading" constant="20" symbolic="YES" id="J0F-qh-3Aq"/>
+                                                <constraint firstAttribute="trailing" secondItem="heH-dA-xRu" secondAttribute="trailing" constant="20" symbolic="YES" id="YAX-gN-VIm"/>
+                                                <constraint firstItem="heH-dA-xRu" firstAttribute="top" secondItem="9Tm-0v-e8i" secondAttribute="top" constant="20" symbolic="YES" id="a9e-VI-ifn"/>
+                                                <constraint firstAttribute="bottom" secondItem="heH-dA-xRu" secondAttribute="bottom" constant="20" symbolic="YES" id="weN-XF-x4l"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jokeLabel" destination="heH-dA-xRu" id="EEH-pn-c74"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -134,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dN4-fE-ZgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913.04347826086962" y="539.73214285714278"/>
+            <point key="canvasLocation" x="913.04347826086962" y="539.0625"/>
         </scene>
         <!--Single Joke View Controller-->
         <scene sceneID="wRf-iX-3On">

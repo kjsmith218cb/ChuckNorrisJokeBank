@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         //        welcomeImage.layer.borderWidth = 1
         //        welcomeImage.layer.masksToBounds = false
         //        welcomeImage.layer.borderColor = UIColor.black.cgColor
-        //        welcomeImage.layer.cornerRadius = welcomePicture.frame.width/2
-                welcomeImage.layer.cornerRadius = 100
+        //        welcomeImage.layer.cornerRadius = 100
+                welcomeImage.layer.cornerRadius = welcomeImage.frame.width/2
                 welcomeImage.clipsToBounds = true
                 
                 // Add a shadow to welcome picture

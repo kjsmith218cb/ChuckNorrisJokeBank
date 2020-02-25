@@ -33,17 +33,15 @@ class JokeListViewController: UIViewController {
 extension JokeListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return randomJoke.count
         return randomJoke.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = randomJoke[indexPath.row]
+//        let cell = UITableViewCell()
+//        cell.textLabel?.text = randomJoke[indexPath.row]
         
-//        let joke = randomJoke[indexPath.row]
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! NEJokeCell
-//        cell.setJoke(randomJoke: joke)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! JokeCell
+        cell.configureJoke(randomJoke: randomJoke[indexPath.row])
         
         return cell
     }
