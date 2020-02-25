@@ -146,6 +146,7 @@
                         <viewLayoutGuide key="safeArea" id="TM4-x3-XxR"/>
                     </view>
                     <connections>
+                        <outlet property="jokeTableView" destination="19N-ty-wla" id="5XD-hu-ZQy"/>
                         <outlet property="okButton" destination="hbl-Qg-qVj" id="gxP-2j-60n"/>
                     </connections>
                 </viewController>

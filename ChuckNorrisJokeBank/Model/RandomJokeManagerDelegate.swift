@@ -38,6 +38,7 @@ struct RandomJokeManager {
                 if let safeData = data {
                     // Check I am getting the correct JSON
                     let dataString = String(data: safeData, encoding: .utf8)
+                    print("GOT DATA STRING")
                     print(dataString!)
                     
                     // Inside closure requires self. when calling from current class
