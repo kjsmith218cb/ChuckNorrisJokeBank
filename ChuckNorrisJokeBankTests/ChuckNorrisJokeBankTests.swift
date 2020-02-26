@@ -16,6 +16,10 @@ class ChuckNorrisJokeBankTests: XCTestCase {
     var helloWorld: String?
     var buttonCount: Int = 0
     
+    var view: ViewController!
+    var singleJoke: SingleJokeViewController!
+    var jokeList: JokeListViewController!
+    
     func buttonCountFunction() {
         // mimicking buttonCountFunction logic inside of ViewController.swift
         buttonCount += 1
@@ -56,7 +60,8 @@ class ChuckNorrisJokeBankTests: XCTestCase {
     
     func testButtonCountIncrease() {
         buttonCount = 0
-        buttonCountFunction()
+//        buttonCountFunction()
+        view.buttonCountFunction()
         XCTAssertTrue(buttonCount == 1)
     }
     

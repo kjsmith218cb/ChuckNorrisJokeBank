@@ -1,12 +1,14 @@
-# ChuckNorrisJokeBank
+# Chuck Norris Joke Bank App
 
-Firstly Download and reaserch the Co-op Bank iOS App and make notes about the UI.
+## This is my 'Tech-Challenge' set by The Co-Operative Bank (goto bottom for the brief)
+
+Firstly Download and research the Co-op Bank iOS App and make notes about the UI.
 
 MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!
 
 Create a new XCode Project (Single View App)
 
-Give it a Name and User Interface of Storyboard (All tickboxes should be empty)
+Give it a Name and User Interface of Storyboard (All tick boxes should be empty)
 
 Deployment Info is the newest version (we will reset this to iOS 10 later)
 
@@ -30,7 +32,7 @@ Add the created images to your Assets.xcassets within your project
 
 LaunchScreen.storyboard
 1. Add image Object and position to suit your design
-2. Set image in Attribures Inspector to 'Mission Statement'
+2. Set image in Attributes Inspector to 'Mission Statement'
 
 Create the MVC layout
 Add 3 new Groups (File > New > Group)
@@ -68,10 +70,10 @@ JokeListViewController - To make this not appear as a pop-up message... Within t
 [VC] JokeListViewController - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
 [VC] JokeListViewController/TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
 
-1. Postition objects to suit your design [refer to Co-op Bank App research]
+1. Position objects to suit your design [refer to Co-op Bank App research]
 2. Add the IBOutlets to corresponding ViewController file
 3. Add IBActions to corresponding ViewController file
-4. Set images in Attribures Inspectors to relevant images you created
+4. Set images in Attributes Inspectors to relevant images you created
 
 Create a new [UITableViewCell] files in the View Group (File > New > File > Coca Touch Class)
 1. JokeCell - Used to format the text of the joke retrieved for displaying in our table
@@ -120,9 +122,9 @@ CONTROLLER: JokeListViewController.swift
 10. Create a ViewDidAppear and reload() the table view so the fetched jokes appear when the screen loads
 11. Add a numberOfRowsInSection & cellForRowAt so out UITable will work
 12. Create an empty array to hold the retrieved random jokes
-13. numberOfRowsInSection needs to be equal to the array we createds .count
+13. numberOfRowsInSection needs to be equal to the array we created .count
 14. cellForRowAt now needs to populate the JokeCell we created earlier with the array[indexPath.row] in order to display all jokes held in our array
-15. In order to make the table scroll infinatly we need to introduce scrollViewDidScroll to calaculate when we have reached the bottom of the table
+15. In order to make the table scroll infinitely we need to introduce scrollViewDidScroll to calculate when we have reached the bottom of the table
 16. Once we have confirmed the user has reached the bottom of the page we can call for the app to fetch another batch of jokes from the function we created earlier and the table reloaded with the new data
 17. I have set a 1 second delay so the spinner function will be seen by the user
 18. SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
@@ -133,3 +135,46 @@ SET CONSTRAINTS & TEST ON DEVICES...
 ADD UNIT TESTS
 1. Within your project (under TARGETS) add 'Unit Testing Bundle'
 2. Enter your tests within the swift file created.
+
+# Brief
+
+## iOS Swift Programming Challenge - Junior
+### Functional requirements
+Create a simple iOS app that interacts with the Internet Chuck Norris Database API [GitHub](http://www.icndb.com/api/​)
+
+The Challenge consists of three tasks, each has a button on the home screen:
+
+## 1) Random Joke
+When the ‘Random Joke’ button is pressed, the app fetches one random joke from the Chuck Norris server and displays the random joke in a popup with an OK button.
+
+Use the following end point
+[GitHub](http://api.icndb.com/jokes/random?exclude=[explicit​])
+
+## 2) Never-ending Joke list
+When the ‘Never-ending Jokes’ button is pressed, the app opens a new view that contains a list of random jokes. Jokes should be requested asynchronously, in batches from the server. When the user scrolls to the bottom of the list, the list shows a loading message indicating that more jokes are being fetched.
+
+Since the jokes are random, it is fine in this simple task to have duplicate jokes in the list. 
+
+Use the following end point
+[GitHub](http://api.icndb.com/jokes/random?exclude=[explicit​])
+
+## Technical requirements
+   
+The application should be written entirely in Swift 4.x+ and able to run on any iPhone running iOS 10.0 or greater.
+
+The app layer should support iPhone (required) and iPad (nice to have, but not required).
+
+## Evaluation criteria
+
+* ● The solution should be of high quality, suitable for production. This means that it should be stable, account for edge cases, unhappy scenarios and be responsive and fluid. Make sure you are paying attention to detailIf you are unsure about anything, use your own judgment to create the best solution. This is just a test to show your approach to problem solving, design and software development
+* ● We would like to see business logic covered by ​Unit tests.
+
+* Use any testable architecture (eg, MVVM, MVVM+C Viper or clean architecture) however, we required you to rely solely on the native XCTest framework (no external libraries are allowed for unit tests)
+
+* ● Your code should demonstrate best-practices both from an iOS and a general software development perspective.
+
+* ● For design/UI, you can use the Coop application as a reference. .
+
+## Deliverables
+
+The completed project can be delivered as a zipped file or in a GitHub repository. A readme file should be included detailing how to simply build the app.

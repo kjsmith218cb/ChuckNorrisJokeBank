@@ -24,11 +24,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chuck-norris-pic" translatesAutoresizingMaskIntoConstraints="NO" id="hlj-vd-BQN">
                                 <rect key="frame" x="82" y="157" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="xh7-Ie-sbe"/>
+                                    <constraint firstAttribute="width" constant="250" id="ZFa-0F-5uO"/>
+                                    <constraint firstAttribute="height" constant="250" id="hnG-C4-Kyi"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to The Chuck-norris Joke Bank's new app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-SK-5Ly">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to The Chuck-norris Joke Bank's new app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-SK-5Ly">
                                 <rect key="frame" x="82" y="439" width="250" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="fTc-Qu-0ZQ"/>
+                                    <constraint firstAttribute="height" constant="55" id="wWm-FK-CRC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="0.017911188299999999" green="0.18192347880000001" blue="0.4064105153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -78,21 +83,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="peh-Fm-pBQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="1tD-rp-Nj0"/>
-                            <constraint firstItem="hlj-vd-BQN" firstAttribute="top" secondItem="peh-Fm-pBQ" secondAttribute="bottom" constant="8" id="5cY-ND-u87"/>
+                            <constraint firstItem="hlj-vd-BQN" firstAttribute="top" secondItem="peh-Fm-pBQ" secondAttribute="bottom" constant="8" id="6Xv-yv-yVw"/>
                             <constraint firstItem="V9a-Zd-ccL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="8lm-jD-LUG"/>
                             <constraint firstItem="iAi-ZK-HsN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="9Qd-50-aM0"/>
-                            <constraint firstItem="hlj-vd-BQN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="BUi-Ha-gTb"/>
-                            <constraint firstItem="hlj-vd-BQN" firstAttribute="centerX" secondItem="peh-Fm-pBQ" secondAttribute="centerX" id="H12-dv-dbc"/>
                             <constraint firstItem="uvN-TM-tKT" firstAttribute="top" secondItem="V9a-Zd-ccL" secondAttribute="bottom" constant="10" id="LyM-P8-tRI"/>
+                            <constraint firstItem="kvc-SK-5Ly" firstAttribute="top" secondItem="hlj-vd-BQN" secondAttribute="bottom" constant="32" id="MT2-Tk-h3u"/>
                             <constraint firstItem="peh-Fm-pBQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="MZu-DD-XBd"/>
                             <constraint firstItem="uvN-TM-tKT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Mu9-WW-XoW"/>
-                            <constraint firstItem="kvc-SK-5Ly" firstAttribute="top" secondItem="hlj-vd-BQN" secondAttribute="bottom" constant="32" id="NeX-Bc-p5f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAi-ZK-HsN" secondAttribute="trailing" constant="32" id="VQb-Oc-XBy"/>
                             <constraint firstItem="iAi-ZK-HsN" firstAttribute="top" secondItem="uvN-TM-tKT" secondAttribute="bottom" constant="12" id="Vrs-mi-eBJ"/>
-                            <constraint firstItem="hlj-vd-BQN" firstAttribute="trailing" secondItem="kvc-SK-5Ly" secondAttribute="trailing" id="WJi-Fs-i4l"/>
+                            <constraint firstItem="hlj-vd-BQN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YKs-d7-5AJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iAi-ZK-HsN" secondAttribute="bottom" constant="20" id="jrE-M2-Fl3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V9a-Zd-ccL" secondAttribute="trailing" constant="32" id="lHx-Xy-ufE"/>
-                            <constraint firstItem="hlj-vd-BQN" firstAttribute="leading" secondItem="kvc-SK-5Ly" secondAttribute="leading" id="naR-11-ZQL"/>
+                            <constraint firstItem="kvc-SK-5Ly" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgx-ak-C4O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uvN-TM-tKT" secondAttribute="trailing" constant="32" id="sdt-pc-qHW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="peh-Fm-pBQ" secondAttribute="trailing" constant="32" id="vVM-d6-ekw"/>
                         </constraints>
@@ -120,8 +123,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbl-Qg-qVj">
-                                <rect key="frame" x="32" y="809" width="350" height="33"/>
+                                <rect key="frame" x="32" y="802" width="350" height="40"/>
                                 <color key="backgroundColor" red="0.20712950829999999" green="0.58341789249999998" blue="0.1292413473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tdc-KP-Jee"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,7 +140,7 @@
                                 <rect key="frame" x="32" y="49" width="350" height="100"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19N-ty-wla">
-                                <rect key="frame" x="32" y="157" width="350" height="612"/>
+                                <rect key="frame" x="32" y="157" width="350" height="605"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="Xcp-5u-L4S" customClass="JokeCell" customModule="ChuckNorrisJokeBank" customModuleProvider="target">
