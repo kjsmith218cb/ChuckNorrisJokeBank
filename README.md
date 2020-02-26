@@ -167,9 +167,10 @@ The app layer should support iPhone (required) and iPad (nice to have, but not r
 ## Evaluation criteria
 
 * The solution should be of high quality, suitable for production. This means that it should be stable, account for edge cases, unhappy scenarios and be responsive and fluid. Make sure you are paying attention to detailIf you are unsure about anything, use your own judgment to create the best solution. This is just a test to show your approach to problem solving, design and software development
+
 * We would like to see business logic covered by ​Unit tests.
 
-Use any testable architecture (eg, MVVM, MVVM+C Viper or clean architecture) however, we required you to rely solely on the native XCTest framework (no external libraries are allowed for unit tests)
+    *Use any testable architecture (eg, MVVM, MVVM+C Viper or clean architecture) however, we required you to rely solely on the native XCTest framework (no external libraries are allowed for unit tests)
 
 * Your code should demonstrate best-practices both from an iOS and a general software development perspective.
 
