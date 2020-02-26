@@ -136,11 +136,13 @@ ADD UNIT TESTS
 1. Within your project (under TARGETS) add 'Unit Testing Bundle'
 2. Enter your tests within the swift file created.
 
+![TEST](/Screenshots/app.logo.png)
+
 # Brief
 
 ## iOS Swift Programming Challenge - Junior
 ### Functional requirements
-Create a simple iOS app that interacts with the Internet Chuck Norris Database API [GitHub](http://www.icndb.com/api/​)
+Create a simple iOS app that interacts with the Internet Chuck Norris Database API [http://www.icndb.com/api/​](http://www.icndb.com/api/​)
 
 The Challenge consists of three tasks, each has a button on the home screen:
 
