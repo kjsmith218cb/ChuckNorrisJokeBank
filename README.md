@@ -5,6 +5,7 @@
 ## IMPORTANT
 
 **Download and research the Co-op Bank iOS App and make notes about the UI.**
+
 **MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!**
 
 ### Let's Begin
