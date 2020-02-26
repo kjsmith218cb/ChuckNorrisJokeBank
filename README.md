@@ -8,6 +8,9 @@
 
 **MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!**
 
+> Block this Code
+> Here Also
+
 ### Let's Begin
 1. Create a new XCode Project (Single View App)
 2. Give it a Name and User Interface of Storyboard (All tick boxes should be empty)
