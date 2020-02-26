@@ -13,7 +13,7 @@ class JokeCell: UITableViewCell {
     @IBOutlet weak var jokeLabel: UILabel!
     
     func configureJoke(randomJoke: String) {
-        print(randomJoke)
+//        print(randomJoke)
         jokeLabel.text = randomJoke
     }
 

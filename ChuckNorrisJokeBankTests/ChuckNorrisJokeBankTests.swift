@@ -12,14 +12,24 @@ import XCTest
 @testable import ChuckNorrisJokeBank
 
 class ChuckNorrisJokeBankTests: XCTestCase {
+    
+    var helloWorld: String?
+    var buttonCount: Int = 0
+    
+    func buttonCountFunction() {
+        // mimicking buttonCountFunction logic inside of ViewController.swift
+        buttonCount += 1
+    }
+    
 
-//    override func setUp() {
-//        // Put setup code here. This method is called before the invocation of each test method in the class.
-//    }
-//
-//    override func tearDown() {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//    }
+    override func setUp() {
+        helloWorld = "hello world"
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
 //
 //    func testExample() {
 //        // This is an example of a functional test case.
@@ -35,17 +45,20 @@ class ChuckNorrisJokeBankTests: XCTestCase {
     
     // Learn about Unit Testing...
     func testHelloWorld() {
-        var helloWorld: String?
-        XCTAssertNil(helloWorld)
-        
-        helloWorld = "hello world"
+//        var helloWorld: String?
+//        XCTAssertNil(helloWorld)
+//
+//        helloWorld = "hello world"
         // un/comment to show pass vs fail test
         XCTAssertEqual(helloWorld, "hello world")
 //        XCTAssertEqual(helloWorld, "hello worldx")
     }
     
-    func testTestName() {
-        
+    func testButtonCountIncrease() {
+        buttonCount = 0
+        buttonCountFunction()
+        XCTAssertTrue(buttonCount == 1)
     }
+    
 
 }

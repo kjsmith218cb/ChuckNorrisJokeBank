@@ -11,7 +11,8 @@ import UIKit
 class JokeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RandomJokeManagerDelegate {
     
     var randomJokeManager = RandomJokeManager()
-    var refreshControl: UIRefreshControl!
+      // Pull Down Refresh NOT REQUIRED - PAGINATION!
+//    var refreshControl: UIRefreshControl!
     
     var fetchingMore = false
 //    var randomJokeArray = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10"]
@@ -28,6 +29,10 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         
         jokeTableView.delegate = self
         jokeTableView.dataSource = self
+        
+// *** SPINNER FUNCTION ERROR
+//        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
+//        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
         
         // Style buttons
         okButton.layer.cornerRadius = 20
@@ -66,9 +71,9 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didUpdateRandomJoke(_ randomJokeManager: RandomJokeManager, randomJoke: String) {
         
-        print("DID UPDATE RANDOM JOKE")
-        print(randomJoke)
-        print(self.randomJokeArray)
+//        print("DID UPDATE RANDOM JOKE")
+//        print(randomJoke)
+//        print(self.randomJokeArray)
         // Replace Occurences of bad punctuation
         let replaceQuot = randomJoke.replacingOccurrences(of: "&quot;", with: "\"")
         // Found a joke stating he?s, but appears to be an error in the API as ' appears in other jokes and ? used correctly...
@@ -77,7 +82,7 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         DispatchQueue.main.async {
             print(replaceQuot)
             self.randomJokeArray.append(replaceQuot)
-            print(self.randomJokeArray)
+//            print(self.randomJokeArray)
         }
                                   
     }
@@ -89,16 +94,44 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func okButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+  
+// *** SPINNER FUNCTION ERROR
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 2
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// *** SPINNER FUNCTION ERROR
+//        if section == 0 {
+//            print("Section 0: numberOfRowsInSection")
+//            print("I have counted at Section 0: \(randomJokeArray.count)")
             return randomJokeArray.count
+// *** SPINNER FUNCTION ERROR
+//        } else if section == 1 && fetchingMore {
+//            print("Section 1: numberOfRowsInSection")
+//            print("I have counted at Section 1: \(randomJokeArray.count)")
+//            return 1
+//        }
+//        print("LAST SECTION")
+//        return 0
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! JokeCell
-        cell.configureJoke(randomJoke: randomJokeArray[indexPath.row])
-            
-        return cell
+// *** SPINNER FUNCTION ERROR
+//        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! JokeCell
+            cell.configureJoke(randomJoke: randomJokeArray[indexPath.row])
+
+            return cell
+// *** SPINNER FUNCTION ERROR
+//        } else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell") as! LoadingCell
+//            cell.spinner.startAnimating()
+//
+//            return cell
+//        }
+        
+        
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -116,6 +149,8 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     func beginBatchFetch() {
         fetchingMore = true
         print("Begin Batch Fetch")
+// *** SPINNER FUNCTION ERROR
+//        jokeTableView.reloadSections(IndexSet(integer: 1), with: .none)
         
         // Add 1 second delay for 'Loading Spinner' to display
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {

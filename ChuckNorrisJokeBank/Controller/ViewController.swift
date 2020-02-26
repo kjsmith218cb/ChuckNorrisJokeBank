@@ -54,12 +54,17 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "goToList", sender: self)
     }
     
-    @IBAction func unknownButtonPressed(_ sender: UIButton) {
+    func buttonCountFunction() {
         buttonCount += 1
         print(buttonCount)
         if (buttonCount == 5) {
             print("PROOF: Persistance Pays Off - YOU GOT THE JOB!!!")
         }
+        
+    }
+    
+    @IBAction func unknownButtonPressed(_ sender: UIButton) {
+        buttonCountFunction()
     }
     
 }
