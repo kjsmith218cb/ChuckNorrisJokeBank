@@ -148,7 +148,7 @@ The Challenge consists of three tasks, each has a button on the home screen:
 When the ‘Random Joke’ button is pressed, the app fetches one random joke from the Chuck Norris server and displays the random joke in a popup with an OK button.
 
 Use the following end point
-[GitHub](http://api.icndb.com/jokes/random?exclude=[explicit​])
+[http://api.icndb.com/jokes/random?exclude=[explicit​]](http://api.icndb.com/jokes/random?exclude=[explicit​])
 
 ## 2) Never-ending Joke list
 When the ‘Never-ending Jokes’ button is pressed, the app opens a new view that contains a list of random jokes. Jokes should be requested asynchronously, in batches from the server. When the user scrolls to the bottom of the list, the list shows a loading message indicating that more jokes are being fetched.
@@ -156,7 +156,7 @@ When the ‘Never-ending Jokes’ button is pressed, the app opens a new view th
 Since the jokes are random, it is fine in this simple task to have duplicate jokes in the list. 
 
 Use the following end point
-[GitHub](http://api.icndb.com/jokes/random?exclude=[explicit​])
+[http://api.icndb.com/jokes/random?exclude=[explicit​]](http://api.icndb.com/jokes/random?exclude=[explicit​])
 
 ## Technical requirements
    
@@ -170,7 +170,7 @@ The app layer should support iPhone (required) and iPad (nice to have, but not r
 
 * We would like to see business logic covered by ​Unit tests.
 
-    *Use any testable architecture (eg, MVVM, MVVM+C Viper or clean architecture) however, we required you to rely solely on the native XCTest framework (no external libraries are allowed for unit tests)
+    Use any testable architecture (eg, MVVM, MVVM+C Viper or clean architecture) however, we required you to rely solely on the native XCTest framework (no external libraries are allowed for unit tests)
 
 * Your code should demonstrate best-practices both from an iOS and a general software development perspective.
 
