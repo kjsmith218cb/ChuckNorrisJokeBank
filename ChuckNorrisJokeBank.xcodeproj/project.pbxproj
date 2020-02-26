@@ -18,7 +18,18 @@
 		3053F07D240487AE00F9C8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053F07B240487AE00F9C8B8 /* LaunchScreen.storyboard */; };
 		3053F089240489D500F9C8B8 /* SingleJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F088240489D500F9C8B8 /* SingleJokeViewController.swift */; };
 		3053F08B240489E300F9C8B8 /* JokeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F08A240489E300F9C8B8 /* JokeListViewController.swift */; };
+		367533DF2406888B00DFD72E /* ChuckNorrisJokeBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367533DE2406888B00DFD72E /* ChuckNorrisJokeBankTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		367533E12406888B00DFD72E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3053F0652404879E00F9C8B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3053F06C2404879F00F9C8B8;
+			remoteInfo = ChuckNorrisJokeBank;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		301D765E2404936B00F4B21C /* RandomJokeManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeManagerDelegate.swift; sourceTree = "<group>"; };
@@ -34,10 +45,20 @@
 		3053F07E240487AE00F9C8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3053F088240489D500F9C8B8 /* SingleJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleJokeViewController.swift; sourceTree = "<group>"; };
 		3053F08A240489E300F9C8B8 /* JokeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeListViewController.swift; sourceTree = "<group>"; };
+		367533DC2406888B00DFD72E /* ChuckNorrisJokeBankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokeBankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		367533DE2406888B00DFD72E /* ChuckNorrisJokeBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokeBankTests.swift; sourceTree = "<group>"; };
+		367533E02406888B00DFD72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3053F06A2404879F00F9C8B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		367533D92406888B00DFD72E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3053F06F2404879F00F9C8B8 /* ChuckNorrisJokeBank */,
+				367533DD2406888B00DFD72E /* ChuckNorrisJokeBankTests */,
 				3053F06E2404879F00F9C8B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				3053F06D2404879F00F9C8B8 /* ChuckNorrisJokeBank.app */,
+				367533DC2406888B00DFD72E /* ChuckNorrisJokeBankTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +130,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		367533DD2406888B00DFD72E /* ChuckNorrisJokeBankTests */ = {
+			isa = PBXGroup;
+			children = (
+				367533DE2406888B00DFD72E /* ChuckNorrisJokeBankTests.swift */,
+				367533E02406888B00DFD72E /* Info.plist */,
+			);
+			path = ChuckNorrisJokeBankTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +159,24 @@
 			productReference = 3053F06D2404879F00F9C8B8 /* ChuckNorrisJokeBank.app */;
 			productType = "com.apple.product-type.application";
 		};
+		367533DB2406888B00DFD72E /* ChuckNorrisJokeBankTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 367533E52406888B00DFD72E /* Build configuration list for PBXNativeTarget "ChuckNorrisJokeBankTests" */;
+			buildPhases = (
+				367533D82406888B00DFD72E /* Sources */,
+				367533D92406888B00DFD72E /* Frameworks */,
+				367533DA2406888B00DFD72E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				367533E22406888B00DFD72E /* PBXTargetDependency */,
+			);
+			name = ChuckNorrisJokeBankTests;
+			productName = ChuckNorrisJokeBankTests;
+			productReference = 367533DC2406888B00DFD72E /* ChuckNorrisJokeBankTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -139,6 +189,10 @@
 				TargetAttributes = {
 					3053F06C2404879F00F9C8B8 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					367533DB2406888B00DFD72E = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3053F06C2404879F00F9C8B8;
 					};
 				};
 			};
@@ -156,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				3053F06C2404879F00F9C8B8 /* ChuckNorrisJokeBank */,
+				367533DB2406888B00DFD72E /* ChuckNorrisJokeBankTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +223,13 @@
 				3053F07D240487AE00F9C8B8 /* LaunchScreen.storyboard in Resources */,
 				3053F07A240487AE00F9C8B8 /* Assets.xcassets in Resources */,
 				3053F0782404879F00F9C8B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		367533DA2406888B00DFD72E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +251,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		367533D82406888B00DFD72E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367533DF2406888B00DFD72E /* ChuckNorrisJokeBankTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		367533E22406888B00DFD72E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3053F06C2404879F00F9C8B8 /* ChuckNorrisJokeBank */;
+			targetProxy = 367533E12406888B00DFD72E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3053F0762404879F00F9C8B8 /* Main.storyboard */ = {
@@ -361,6 +439,44 @@
 			};
 			name = Release;
 		};
+		367533E32406888B00DFD72E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChuckNorrisJokeBankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.djs.ChuckNorrisJokeBankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisJokeBank.app/ChuckNorrisJokeBank";
+			};
+			name = Debug;
+		};
+		367533E42406888B00DFD72E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChuckNorrisJokeBankTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.djs.ChuckNorrisJokeBankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisJokeBank.app/ChuckNorrisJokeBank";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -378,6 +494,15 @@
 			buildConfigurations = (
 				3053F082240487AE00F9C8B8 /* Debug */,
 				3053F083240487AE00F9C8B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		367533E52406888B00DFD72E /* Build configuration list for PBXNativeTarget "ChuckNorrisJokeBankTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				367533E32406888B00DFD72E /* Debug */,
+				367533E42406888B00DFD72E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

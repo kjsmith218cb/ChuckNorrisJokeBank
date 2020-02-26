@@ -117,6 +117,7 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         fetchingMore = true
         print("Begin Batch Fetch")
         
+        // Add 1 second delay for 'Loading Spinner' to display
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.retrieveJokes()
             self.fetchingMore = false

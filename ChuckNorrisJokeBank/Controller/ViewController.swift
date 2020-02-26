@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         buttonCount += 1
         print(buttonCount)
         if (buttonCount == 5) {
-            print("YOU GOT THE JOB SCREEN")
+            print("PROOF: Persistance Pays Off - YOU GOT THE JOB!!!")
         }
     }
     

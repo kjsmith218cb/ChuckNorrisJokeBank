@@ -1,5 +1,7 @@
 # ChuckNorrisJokeBank
 
+Firstly Download and reaserch the Co-op Bank iOS App and make notes about the UI.
+
 MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!
 
 Create a new XCode Project (Single View App)
@@ -92,3 +94,8 @@ Random Joke Data
 
 Joke Cell
 1.
+
+SET CONSTRAINTS
+
+ADD UNIT TESTS
+1. Within your project (under TARGETS) add 'Unit Testing Bundle'
