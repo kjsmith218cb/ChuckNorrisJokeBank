@@ -2,23 +2,21 @@
 
 ## This is my 'Tech-Challenge' set by The Co-Operative Bank (goto bottom for the brief)
 
-Firstly Download and research the Co-op Bank iOS App and make notes about the UI.
+## IMPORTANT
 
-MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!
+**Download and research the Co-op Bank iOS App and make notes about the UI.**
+**MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!**
 
-Create a new XCode Project (Single View App)
+### Let's Begin
+1. Create a new XCode Project (Single View App)
+2. Give it a Name and User Interface of Storyboard (All tick boxes should be empty)
+3. Deployment Info should be set to the latest version
+4. Device's should be set to iPhone & iPad
+5. Orientation should be set to Portrait only (As this seems matches Co-op Banks App)
+6. Find your favorite 'Chuck Norris' image from google search and save it. [Assumed knowledge of Google]
 
-Give it a Name and User Interface of Storyboard (All tick boxes should be empty)
-
-Deployment Info is the newest version (we will reset this to iOS 10 later)
-
-Device's should be iPhone & iPad
-
-Orientation should be set to Portrait only (As this seems matches Co-op Banks App)
-
-Find your favorite 'Chuck Norris' image from  google search and save it. [Assumed knowledge of Google]
-
-Use Canva.com to create images [Assumed knowledge of this site]
+### Create Your Images
+**Use Canva.com to create the following images [Assumed knowledge of this site]**
 1. An App Icon
 2. Mission Statement [When App is loading]
 2. Business Logo [To appear on all View Controllers]
@@ -26,10 +24,10 @@ Use Canva.com to create images [Assumed knowledge of this site]
 4. A pair of Nun-'chucks'
 5. A bruised up bad guy
 
-Use appicon.io to create your images [Assumed knowledge of this site]
+**Use appicon.io to create your images [Assumed knowledge of this site]**
+6. Add the created images to your Assets.xcassets within your project
 
-Add the created images to your Assets.xcassets within your project
-
+### Set-up
 LaunchScreen.storyboard
 1. Add image Object and position to suit your design
 2. Set image in Attributes Inspector to 'Mission Statement'
@@ -39,10 +37,8 @@ Add 3 new Groups (File > New > Group)
 1. Model
 2. View
 3. Controller
-
-Move
-*.storyboard to View Group
-*.ViewController to Controller Group
+4. Move *.storyboard to View Group
+5. Move *.ViewController to Controller Group
 
 Create 2 new [UIViewController SubClass] files in the Controller Group (File > New > File > Coca Touch Class)
 1. SingleJokeViewController.swift
