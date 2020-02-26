@@ -32,6 +32,8 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         // Style buttons
         okButton.layer.cornerRadius = 20
         
+        retrieveJokes()
+        
 //        retrieveJokes()
 //        jokeTableView.reloadData()
         
@@ -49,6 +51,10 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
 //        // Stop Spinner
 //        refreshControl.endRefreshing()
 //    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        jokeTableView.reloadData()
+    }
 
     func retrieveJokes() {
         // Loop to get 10 random jokes

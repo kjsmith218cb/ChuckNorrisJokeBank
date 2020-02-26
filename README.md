@@ -1,5 +1,7 @@
 # ChuckNorrisJokeBank
 
+MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!
+
 Create a new XCode Project (Single View App)
 
 Give it a Name and User Interface of Storyboard (All tickboxes should be empty)
@@ -69,7 +71,7 @@ JokeListViewController - Add: 1 image Object, 1 tableView Object (Add 1 prototyp
 4. Set images in Attribures Inspectors to relevant images you created
 
 ViewController.swift
-1. edit the appearance of your IBOutlets to match your design
+1. Edit the appearance of your IBOutlets to match your design
 2. In your button 1 IBActions enter 'self.performSegue(withIdentifier: "goToSingle", sender: self)'
 3. In your button 2 IBActions enter 'self.performSegue(withIdentifier: "goToList", sender: self)'
 4. Button 3 has no specification and so does not require an action.
@@ -79,5 +81,14 @@ SingleJokeViewController.swift
 1.
 
 JokeListViewController.swift
-2.
+1.
+Add Label! ('Make sure set constraints!!!' wasted time!!! :()
 
+Random Joke Manager Delegate
+1.
+
+Random Joke Data
+1.
+
+Joke Cell
+1.
