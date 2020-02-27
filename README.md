@@ -142,8 +142,14 @@ func test() {
 15. In order to make the table scroll infinitely we need to introduce scrollViewDidScroll to calculate when we have reached the bottom of the table
 16. Once we have confirmed the user has reached the bottom of the page we can call for the app to fetch another batch of jokes from the function we created earlier and the table reloaded with the new data
 17. I have set a 1 second delay so the spinner function will be seen by the user
-18. SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
-/Add Label! ('Make sure set constraints!!!' wasted time!!! :()
+18. *SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.*
+> If you would like to see the spinner in action you need to un-comment the code between
+>// *** SPINNER FUNCTION ERROR [1]
+>//        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
+>//        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
+>// *** SPINNER FUNCTION ERROR [1]
+
+*When adding the Label Object to the Table Cell, Make sure set constraints! or you could waste alot of time!*
 
 ### SET CONSTRAINTS & TEST ON DEVICES...
 
