@@ -146,7 +146,8 @@ class SingleJokeViewController: UIViewController, RandomJokeManagerDelegate {
 
 6. Add RandomJokeManagerDelegate, UITableViewDelegate & UITableViewDataSource to your class
 ```swift
-class JokeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RandomJokeManagerDelegate {
+class JokeListViewController: UIViewController, UITableViewDelegate, 
+            UITableViewDataSource, RandomJokeManagerDelegate {
 ```
 7. Set RandomJokeManager & TableView delegates equal to .self in 'viewDidLoad'
 8. Create a loop that we can use to call and retrieve 'x' amount of jokes each time its requested
