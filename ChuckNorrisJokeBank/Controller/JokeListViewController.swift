@@ -88,7 +88,8 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func okButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-  
+    
+    // Spinner/Loading
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -96,18 +97,11 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // If-Else-If for Spinner/Loading
         if section == 0 {
-            print("Section 0: numberOfRowsInSection")
-            print("I have counted at Section 0: \(randomJokeArray.count)")
-
             return randomJokeArray.count
 
         } else if section == 1 && fetchingMore {
-            print("Section 1: numberOfRowsInSection")
-            print("I have counted at Section 1: \(randomJokeArray.count)")
             return 1
         }
-        
-        print("LAST SECTION")
         return 0
     }
         

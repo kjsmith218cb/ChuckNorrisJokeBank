@@ -171,29 +171,29 @@ var randomJokeArray = [String]()
 17. Once we have confirmed the user has reached the bottom of the page we can call for the app to fetch another batch of jokes from the function we created earlier and the table reloaded with the new data
 18. I have set a 1 second delay so the spinner function will be seen by the user
 
-#### SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
-> If you would like to see the spinner in action you need to un-comment the 7 areas of code between *** SPINNER FUNCTION ERROR [1-7]
+#### SPINNER
+1. Create new coca touch class [UITableViewCell] in VIEW Group and tick 'Also create XIB file' called LoadingCell
+2. Select LoadingCell and add and 'Activity Indicator View' setting constraints horizontally & vertically
 
-**Change:**
+##### JokeListViewController
+3. Set the LoadingCell up in viewDidLoad
 ```swift
-// *** SPINNER FUNCTION ERROR [1]
-//        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
-//        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
-// *** SPINNER FUNCTION ERROR [1]
+let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
+jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
 ```
-**To:**
-```swift
-// *** SPINNER FUNCTION ERROR [1]
-        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
-        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
-// *** SPINNER FUNCTION ERROR [1]
-```
+4. Add a 'numberOfSections' and return 2 so we can check when the bottom of the page us reached
+5. Add If, Else If to numberOfRowsInSection to address section we are in
+6. Add If, Else If to cellForRowAt to address section and which cell to display
+7. Add scrollViewDidScroll function to decifer when the bottom of the table has been reached
+8. If bottom of table is reached fetch a new batch of jokes
 
 ### SET CONSTRAINTS & TEST ON DEVICES...
 
 ### ADD UNIT TESTS
 1. Within your project (under TARGETS) add 'Unit Testing Bundle'
 2. Enter your tests within the swift file created.
+
+**As with the rest of this project, I have self taught everything and am getting to grips with this concept slowly**
 
 ### Screenshots
 ![App Logo](./Screenshots/app-logo.png)
