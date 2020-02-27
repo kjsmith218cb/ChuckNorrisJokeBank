@@ -29,8 +29,8 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         jokeTableView.dataSource = self
         
 // *** SPINNER FUNCTION ERROR [1]
-//        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
-//        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
+        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
+        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
 // *** SPINNER FUNCTION ERROR [1]
         
         // Style buttons
@@ -73,9 +73,12 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
 //        let replaceQues = replaceQuot.replacingOccurrences(of: "?", with: "\'")
         
         // Send (puntuation error free) joke recieved to ViewController label
-        DispatchQueue.main.async {
+        // Request Jokes asynchronously after a 1 second delay for 'Loading Spinner' to display to user
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.randomJokeArray.append(replaceQuot)
-        }
+            self.jokeTableView.reloadData()
+            self.fetchingMore = false
+        })
                                   
     }
     
@@ -88,44 +91,44 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     }
   
 // *** SPINNER FUNCTION ERROR [2]
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
 // *** SPINNER FUNCTION ERROR [2]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 // *** SPINNER FUNCTION ERROR [3]
-//        if section == 0 {
-//            print("Section 0: numberOfRowsInSection")
-//            print("I have counted at Section 0: \(randomJokeArray.count)")
+        if section == 0 {
+            print("Section 0: numberOfRowsInSection")
+            print("I have counted at Section 0: \(randomJokeArray.count)")
 // *** SPINNER FUNCTION ERROR [3]
             return randomJokeArray.count
 // *** SPINNER FUNCTION ERROR [4]
-//        } else if section == 1 && fetchingMore {
-//            print("Section 1: numberOfRowsInSection")
-//            print("I have counted at Section 1: \(randomJokeArray.count)")
-//            return 1
-//        }
-//        print("LAST SECTION")
-//        return 0
+        } else if section == 1 && fetchingMore {
+            print("Section 1: numberOfRowsInSection")
+            print("I have counted at Section 1: \(randomJokeArray.count)")
+            return 1
+        }
+        print("LAST SECTION")
+        return 0
 // *** SPINNER FUNCTION ERROR [4]
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 // *** SPINNER FUNCTION ERROR [5]
-//        if indexPath.section == 0 {
+        if indexPath.section == 0 {
 // *** SPINNER FUNCTION ERROR [5]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! JokeCell
             cell.configureJoke(randomJoke: randomJokeArray[indexPath.row])
 
             return cell
 // *** SPINNER FUNCTION ERROR [6]
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell") as! LoadingCell
-//            cell.spinner.startAnimating()
-//
-//            return cell
-//        }
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell") as! LoadingCell
+            cell.spinner.startAnimating()
+
+            return cell
+        }
 // *** SPINNER FUNCTION ERROR [6]
         
     }
@@ -146,15 +149,16 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         fetchingMore = true
         print("Batch Fetching")
 // *** SPINNER FUNCTION ERROR [7]
-//        jokeTableView.reloadSections(IndexSet(integer: 1), with: .none)
+        jokeTableView.reloadSections(IndexSet(integer: 1), with: .none)
 // *** SPINNER FUNCTION ERROR [7]
         
-        // Add 1 second delay for 'Loading Spinner' to display
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+        // Request Jokes asynchronously after a 1 second delay for 'Loading Spinner' to display to user
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.retrieveJokes()
-            self.fetchingMore = false
-            self.jokeTableView.reloadData()
-        })
+//            self.fetchingMore = false
+//            self.jokeTableView.reloadData()
+//            self.fetchingMore = false
+//        })
     }
     
 }
