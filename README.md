@@ -144,10 +144,13 @@ func test() {
 17. I have set a 1 second delay so the spinner function will be seen by the user
 18. *SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.*
 > If you would like to see the spinner in action you need to un-comment the code between
->// *** SPINNER FUNCTION ERROR [1]
->//        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
->//        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
->// *** SPINNER FUNCTION ERROR [1]
+
+```swift
+// *** SPINNER FUNCTION ERROR [1]
+//        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
+//        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
+// *** SPINNER FUNCTION ERROR [1]
+```
 
 *When adding the Label Object to the Table Cell, Make sure set constraints! or you could waste alot of time!*
 
