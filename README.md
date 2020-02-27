@@ -68,19 +68,19 @@ func test() {
 5. Click on the 2nd Segue arrow and from within the attributes inspector give the identifier the name 'goToList' (Present Modally)
 
 #### Main.storyboard
-**SingleJokeViewController** - Will already appear over the first screen (ViewController) with part of the first screen still showing
-
-**JokeListViewController** - We need to make this appear as a pop-up message... 
-1. Within the View Controller Attributes Inspector set 'Transition Style' to 'Flip Horizontal' and set 'Presentation' to 'Full Screen'
-
-**ViewController** - Add: 2 image Objects, 1 label Object and 3 button Objects
-
-**SingleJokeViewController** - Add: 4 image Objects, 1 label Object and 1 button Object
-
-**JokeListViewController** - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
-
-**JokeListViewController** TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
-
+>**SingleJokeViewController** - Will already appear over the first screen (ViewController) with part of the first screen still showing
+>
+>**JokeListViewController** - We need to make this appear as a pop-up message... 
+>1. Within the View Controller Attributes Inspector set 'Transition Style' to 'Flip Horizontal' and set 'Presentation' to 'Full Screen'
+>
+>**ViewController** - Add: 2 image Objects, 1 label Object and 3 button Objects
+>
+>**SingleJokeViewController** - Add: 4 image Objects, 1 label Object and 1 button Object
+>
+>**JokeListViewController** - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
+>
+>**JokeListViewController** TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
+>
 1. Position objects to suit your design [refer to Co-op Bank App research]
 2. Add the IBOutlets to corresponding ViewController file
 3. Add IBActions to corresponding ViewController file
