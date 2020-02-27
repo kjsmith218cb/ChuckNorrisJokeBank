@@ -124,6 +124,7 @@ func test() {
 3. You will now be able to Control + Drag the Label Object from Main.storyboard to JokeCell.swift to create an IBOutlet
 
 **VIEW: JokeCell.swift**
+
 4. Create a function that will be passed a joke in string format 'func myFunc (randomJoke: String)'
 5. Set the IBOutlet UILabel text to the joke received (ie. randomJoke)
 
