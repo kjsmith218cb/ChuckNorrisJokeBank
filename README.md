@@ -128,9 +128,9 @@
 ```swift
 class SingleJokeViewController: UIViewController, RandomJokeManagerDelegate {
 ```
-4. Set RandomJokeManagerDelegate to .self
+4. Set RandomJokeManagerDelegate to .self in 'viewDidLoad'
 5. Call the function to retrieve a random joke from the API (fetchRandomJoke)
-6. Display the data returned to the UILabel on screen
+6. Display the data returned to the UILabel on screen if valid data was returned from the function created in the RandomJokeManagerDelegate Protocol
 
 #### CONTROLLER: JokeListViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
@@ -145,7 +145,10 @@ class SingleJokeViewController: UIViewController, RandomJokeManagerDelegate {
 **CONTROLLER: JokeListViewController.swift**
 
 6. Add RandomJokeManagerDelegate, UITableViewDelegate & UITableViewDataSource to your class
-7. Set RandomJokeManager & TableView delegates equal to .self
+```swift
+class JokeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RandomJokeManagerDelegate {
+```
+7. Set RandomJokeManager & TableView delegates equal to .self in 'viewDidLoad'
 8. Create a loop that we can use to call and retrieve 'x' amount of jokes each time its requested
 9. In ViewDidLoad - Call the function to retrieve a random joke from the API (fetchRandomJoke) for the number set in our loop
 10. Create a ViewDidAppear and reload() the table view so the fetched jokes appear when the screen loads
