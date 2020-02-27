@@ -48,7 +48,7 @@
 
 #### Add 2 new ViewController Objects to your Main.storyboard
 1. Give one a class (within Identity Inspector) of SingleJokeViewController
-
+![Set Custom Class](./Screenshots/set-custom-class.png)
 2. Give the other a class of JokeListViewController
 *(This now links your code to the 'Assistant' when viewing through Main.storybord)*
 
