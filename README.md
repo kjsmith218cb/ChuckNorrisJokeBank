@@ -14,6 +14,7 @@
 3. Deployment Info should be set to the latest version
 4. Device's should be set to iPhone & iPad
 5. Orientation should be set to Portrait only (As this seems matches Co-op Banks App)
+![Project Setup](./Screenshots/app-logo.png)
 6. Find your favorite 'Chuck Norris' image from google search and save it. [Assumed knowledge of Google]
 
 ### Create Your Images
