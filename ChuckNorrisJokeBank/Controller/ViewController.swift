@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // Pretend Func To test I can Access a view controller from within Unit Testing
+    let firstName: String = ""
+    
     @IBOutlet weak var welcomeImage: UIImageView!
     @IBOutlet weak var randomJokeButton: UIButton!
     @IBOutlet weak var jokeListButton: UIButton!
@@ -57,6 +60,11 @@ class ViewController: UIViewController {
             print("PROOF: Persistance Pays Off - GIVE THIS MAN THE JOB!!!")
         }
         
+    }
+    
+    // Pretend Func To test I can Access a view controller from within Unit Testing
+    func validFirstName() -> Bool {
+        return firstName.count > 3
     }
     
     @IBAction func unknownButtonPressed(_ sender: UIButton) {

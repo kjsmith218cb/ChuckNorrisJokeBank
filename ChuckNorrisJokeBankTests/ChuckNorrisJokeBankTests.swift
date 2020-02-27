@@ -14,44 +14,24 @@ import XCTest
 class ChuckNorrisJokeBankTests: XCTestCase {
     
     var helloWorld: String?
-    var buttonCount: Int = 0
-    
-    var view: ViewController!
-    var singleJoke: SingleJokeViewController!
-    var jokeList: JokeListViewController!
-    
-    func buttonCountFunction() {
-        // mimicking buttonCountFunction logic inside of ViewController.swift
-        buttonCount += 1
-    }
     
     override func setUp() {
-        helloWorld = "hello world"
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        helloWorld = "hello world"
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-//
-//    func testExample() {
-//        // This is an example of a functional test case.
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    }
-//
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
     
-    // Learn about Unit Testing...
+// *****************************MY TESTS******************************************
+    
+    // Learn about Unit Testing [1]...
     func testHellowWorldIsString() {
         var helloWorld: String?
         XCTAssertNil(helloWorld)
     }
-
+    // Learn about Unit Testing [2]...
     func testHelloWorldContent() {
         // un-comment to show pass vs fail test
         XCTAssertEqual(helloWorld, "hello world")
@@ -59,12 +39,24 @@ class ChuckNorrisJokeBankTests: XCTestCase {
     }
     
     // Try testing a function within one of my ViewControllers
-    func testButtonCountIncrease() {
-        buttonCount = 0
-//        buttonCountFunction()
-        view.buttonCountFunction()
-        XCTAssertTrue(buttonCount == 1)
+    
+    // Is UILabel test correct?
+    func labelTest() {
+        
     }
     
+    // Is button ??? enabled?
+    func buttonTest() {
+        
+    }
+        
+// *****************************MY TESTS******************************************
 
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+    
 }
