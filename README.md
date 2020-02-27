@@ -86,10 +86,10 @@ func test() {
 3. Add IBActions to corresponding ViewController file
 4. Set images in Attributes Inspectors to relevant images you created
 
-Create a new UITableViewCell file in the View Group (File > New > File > Coca Touch Class)
+**Create a new UITableViewCell file in the View Group (File > New > File > Coca Touch Class)**
 1. JokeCell - Used to format the text of the joke retrieved for displaying in our table
 
-Create 2 new Swift Files in your 'Model' group (File > New > File > Swift File)
+**Create 2 new Swift Files in your 'Model' group (File > New > File > Swift File)**
 1. RandomJokeManagerJokeDelegate - Used to fetch a random joke from the API
 2. RandomJokeData
 
