@@ -143,6 +143,7 @@ ADD UNIT TESTS
 1. Within your project (under TARGETS) add 'Unit Testing Bundle'
 2. Enter your tests within the swift file created.
 
+### Screenshots
 ![App Logo](./Screenshots/app-logo.png)
 ![Launch Screen](./Screenshots/launch-screen.png)
 ![View Controller](./Screenshots/view-controller.png)
