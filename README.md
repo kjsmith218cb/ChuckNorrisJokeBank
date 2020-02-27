@@ -128,6 +128,7 @@ func test() {
 5. Set the IBOutlet UILabel text to the joke received (ie. randomJoke)
 
 **CONTROLLER: JokeListViewController.swift**
+
 6. Add RandomJokeManagerDelegate, UITableViewDelegate & UITableViewDataSource to your class
 7. Set RandomJokeManager & TableView delegates equal to .self
 8. Create a loop that we can use to call and retrieve 'x' amount of jokes each time its requested
