@@ -73,6 +73,7 @@
 >**JokeListViewController** - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
 >
 >**JokeListViewController** TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
+>*When adding the Label Object to the Table Cell, Make sure to set constraints to bounds! or you could waste alot of time wondering why no data is displayed!*
 >
 1. Position objects to suit your design [refer to Co-op Bank App research]
 2. Add the IBOutlets to corresponding ViewController file
@@ -135,7 +136,6 @@
 15. In order to make the table scroll infinitely we need to introduce scrollViewDidScroll to calculate when we have reached the bottom of the table
 16. Once we have confirmed the user has reached the bottom of the page we can call for the app to fetch another batch of jokes from the function we created earlier and the table reloaded with the new data
 17. I have set a 1 second delay so the spinner function will be seen by the user
-*When adding the Label Object to the Table Cell, Make sure set constraints! or you could waste alot of time!*
 
 #### SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
 > If you would like to see the spinner in action you need to un-comment the 7 areas of code between *** SPINNER FUNCTION ERROR [1-7]
