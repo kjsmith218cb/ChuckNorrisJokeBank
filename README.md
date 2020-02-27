@@ -8,16 +8,6 @@
 
 **MAKE SURE YOUR MACHINES XCODE IS UPTO DATE!!!!!!!!**
 
-> Block this Code
->
-> Here Also
-
-```swift
-func test() {
-    print("Check This Out")
-}
-```
-
 ### Let's Begin
 1. Create a new XCode Project (Single View App)
 2. Give it a Name and User Interface of Storyboard (All tick boxes should be empty)
