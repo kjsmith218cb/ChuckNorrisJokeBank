@@ -54,6 +54,7 @@
 #### Create Segues
 1. From View Controller Scene - Click on the ViewController icon [yellow symbol]
 2. Hold 'Control Button' and drag the blue line to one of the new view controllers created.
+![Project Setup](./Screenshots/make-Segue.png)
 3. Repeat this and drag to the other newly created view controller.
 4. Click on the 1st Segue arrow and from within the attributes inspector give the identifier the name 'goToSingle' (Present Modally)
 5. Click on the 2nd Segue arrow and from within the attributes inspector give the identifier the name 'goToList' (Present Modally)
