@@ -103,6 +103,7 @@
 3. In your 'Button 2' IBActions enter 'self.performSegue(withIdentifier: "goToList", sender: self)'
 4. Button 3 has no specification and so does not require an action.
 5. You will now be sent to the designated ViewController when the button is pressed
+
 *You now have a 'Starting' view that provides links to 2 other views via the buttons coded with Segue's in steps 2 & 3*
 
 #### CONTROLLER: SingleJokeViewController.swift
