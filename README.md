@@ -74,7 +74,7 @@
 >
 >**JokeListViewController** TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
 >
->*When adding the Label Object to the Table Cell, Make sure to set constraints to bounds! or you could waste alot of time wondering why no data is displayed!*
+>*NB: When adding the Label Object to the Table Cell, Make sure to set constraints to bounds! or you could waste alot of time wondering why no data is displayed!*
 >
 1. Position objects to suit your design [refer to Co-op Bank App research]
 2. Add the IBOutlets to corresponding ViewController file
@@ -86,7 +86,7 @@
 
 **Create 2 new Swift Files in your 'Model' group (File > New > File > Swift File)**
 1. RandomJokeManagerJokeDelegate - Used to fetch a random joke from the API
-2. RandomJokeData
+2. RandomJokeData - Structure Data
 
 #### MODEL: RandomJokeManagerDelegate
 1. Set protocol and functions we require to pass the data back to SingleJokeViewController or JokeListViewController
@@ -103,7 +103,7 @@
 3. In your 'Button 2' IBActions enter 'self.performSegue(withIdentifier: "goToList", sender: self)'
 4. Button 3 has no specification and so does not require an action.
 5. You will now be sent to the designated ViewController when the button is pressed
-/You know have a 'Starting' view that provides links to 2 other views via the buttons coded with Segue's in steps 2 & 3
+*You now have a 'Starting' view that provides links to 2 other views via the buttons coded with Segue's in steps 2 & 3*
 
 #### CONTROLLER: SingleJokeViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
