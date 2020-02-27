@@ -73,6 +73,7 @@
 >**JokeListViewController** - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
 >
 >**JokeListViewController** TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
+>
 >*When adding the Label Object to the Table Cell, Make sure to set constraints to bounds! or you could waste alot of time wondering why no data is displayed!*
 >
 1. Position objects to suit your design [refer to Co-op Bank App research]
