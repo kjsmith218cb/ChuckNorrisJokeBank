@@ -134,32 +134,41 @@ class SingleJokeViewController: UIViewController, RandomJokeManagerDelegate {
 
 #### CONTROLLER: JokeListViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
-2. Set the Table View's Prototype cell class to JokeCell (UITableViewCell created earlier)
-3. You will now be able to Control + Drag the Label Object from Main.storyboard to JokeCell.swift to create an IBOutlet
+2. Add the dismiss code to your buttons IBAction
+```swift
+@IBAction func okButtonPressed(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
+}
+```
+3. Set the Table View's Prototype cell class to JokeCell (UITableViewCell created earlier)
+4. You will now be able to Control + Drag the Label Object from Main.storyboard to JokeCell.swift to create an IBOutlet
 
 **VIEW: JokeCell.swift**
 
-4. Create a function that will be passed a joke in string format 'func myFunc (randomJoke: String)'
-5. Set the IBOutlet UILabel text to the joke received (ie. randomJoke)
+5. Create a function that will be passed a joke in string format 'func myFunc (randomJoke: String)'
+6. Set the IBOutlet UILabel text to the joke received (ie. randomJoke)
 
 **CONTROLLER: JokeListViewController.swift**
 
-6. Add RandomJokeManagerDelegate, UITableViewDelegate & UITableViewDataSource to your class
+7. Add RandomJokeManagerDelegate, UITableViewDelegate & UITableViewDataSource to your class
 ```swift
 class JokeListViewController: UIViewController, UITableViewDelegate, 
             UITableViewDataSource, RandomJokeManagerDelegate {
 ```
-7. Set RandomJokeManager & TableView delegates equal to .self in 'viewDidLoad'
-8. Create a loop that we can use to call and retrieve 'x' amount of jokes each time its requested
-9. In ViewDidLoad - Call the function to retrieve a random joke from the API (fetchRandomJoke) for the number set in our loop
-10. Create a ViewDidAppear and reload() the table view so the fetched jokes appear when the screen loads
-11. Add a numberOfRowsInSection & cellForRowAt so out UITable will work
-12. Create an empty array to hold the retrieved random jokes
-13. numberOfRowsInSection needs to be equal to the array we created .count
-14. cellForRowAt now needs to populate the JokeCell we created earlier with the array[indexPath.row] in order to display all jokes held in our array
-15. In order to make the table scroll infinitely we need to introduce scrollViewDidScroll to calculate when we have reached the bottom of the table
-16. Once we have confirmed the user has reached the bottom of the page we can call for the app to fetch another batch of jokes from the function we created earlier and the table reloaded with the new data
-17. I have set a 1 second delay so the spinner function will be seen by the user
+8. Set RandomJokeManager & TableView delegates equal to .self in 'viewDidLoad'
+9. Create a loop that we can use to call and retrieve 'x' amount of jokes each time its requested
+10. In ViewDidLoad - Call the function to retrieve a random joke from the API (fetchRandomJoke) for the number set in our loop
+11. Create a ViewDidAppear and reload() the table view so the fetched jokes appear when the screen loads
+12. Add a numberOfRowsInSection & cellForRowAt so out UITable will work
+13. Create an empty array to hold the retrieved random jokes
+```swift
+var randomJokeArray = [String]()
+```
+14. numberOfRowsInSection needs to be equal to the array we created .count
+15. cellForRowAt now needs to populate the JokeCell we created earlier with the array[indexPath.row] in order to display all jokes held in our array
+16. In order to make the table scroll infinitely we need to introduce scrollViewDidScroll to calculate when we have reached the bottom of the table
+17. Once we have confirmed the user has reached the bottom of the page we can call for the app to fetch another batch of jokes from the function we created earlier and the table reloaded with the new data
+18. I have set a 1 second delay so the spinner function will be seen by the user
 
 #### SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
 > If you would like to see the spinner in action you need to un-comment the 7 areas of code between *** SPINNER FUNCTION ERROR [1-7]
