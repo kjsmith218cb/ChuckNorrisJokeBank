@@ -87,7 +87,7 @@
 
 **Create 2 new Swift Files in your 'Model' group (File > New > File > Swift File)**
 1. RandomJokeManagerJokeDelegate - Used to fetch a random joke from the API
-2. RandomJokeData - Structure Data
+2. RandomJokeData - Used tp structure data
 
 #### MODEL: RandomJokeManagerDelegate
 1. Set protocol and functions we require to pass the data back to SingleJokeViewController or JokeListViewController
@@ -178,6 +178,13 @@ var randomJokeArray = [String]()
 // *** SPINNER FUNCTION ERROR [1]
 //        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
 //        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
+// *** SPINNER FUNCTION ERROR [1]
+```
+
+```swift
+// *** SPINNER FUNCTION ERROR [1]
+        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
+        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
 // *** SPINNER FUNCTION ERROR [1]
 ```
 
