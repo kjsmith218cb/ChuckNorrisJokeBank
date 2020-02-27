@@ -17,11 +17,13 @@ struct RandomJokeManager {
     
     var delegate: RandomJokeManagerDelegate?
     
+    // Provide url for required API
     func fetchRandomJoke() {
         let urlString = "https://api.icndb.com/jokes/random?exclude=[explicit]"
         performRequest(urlString: urlString)
     }
     
+    // Get data back from API call
     func performRequest(urlString: String) {
         // 1. Create a URL
         if let url = URL(string: urlString) {
@@ -37,9 +39,8 @@ struct RandomJokeManager {
                 
                 if let safeData = data {
                     // Check I am getting the correct JSON
-                    let dataString = String(data: safeData, encoding: .utf8)
-                    print("GOT DATA STRING")
-                    print(dataString!)
+//                    let dataString = String(data: safeData, encoding: .utf8)
+//                    print(dataString!)
                     
                     // Inside closure requires self. when calling from current class
                     if let randomJoke = self.parseJSON(jokeData: safeData) {
@@ -47,7 +48,6 @@ struct RandomJokeManager {
                     }
                 }
             }
-            
             // 4. Start the task
             task.resume()
         }

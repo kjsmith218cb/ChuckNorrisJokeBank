@@ -15,7 +15,6 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
 //    var refreshControl: UIRefreshControl!
     
     var fetchingMore = false
-//    var randomJokeArray = ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5", "Joke 6", "Joke 7", "Joke 8", "Joke 9", "Joke 10"]
     var randomJokeArray = [String]()
     
     @IBOutlet weak var jokeTableView: UITableView!
@@ -26,7 +25,6 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
         
         randomJokeManager.delegate = self
-        
         jokeTableView.delegate = self
         jokeTableView.dataSource = self
         
@@ -39,9 +37,6 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
         okButton.layer.cornerRadius = 20
         
         retrieveJokes()
-        
-//        retrieveJokes()
-//        jokeTableView.reloadData()
         
 //        //Pull Down Refresh NOT REQUIRED - PAGINATION!!
 //        refreshControl = UIRefreshControl()
@@ -72,18 +67,14 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didUpdateRandomJoke(_ randomJokeManager: RandomJokeManager, randomJoke: String) {
         
-//        print("DID UPDATE RANDOM JOKE")
-//        print(randomJoke)
-//        print(self.randomJokeArray)
-        // Replace Occurences of bad punctuation
+        // Replace Occurences of 'bad/poor' punctuation in a JSON
         let replaceQuot = randomJoke.replacingOccurrences(of: "&quot;", with: "\"")
         // Found a joke stating he?s, but appears to be an error in the API as ' appears in other jokes and ? used correctly...
 //        let replaceQues = replaceQuot.replacingOccurrences(of: "?", with: "\'")
-                                  
+        
+        // Send (puntuation error free) joke recieved to ViewController label
         DispatchQueue.main.async {
-            print(replaceQuot)
             self.randomJokeArray.append(replaceQuot)
-//            print(self.randomJokeArray)
         }
                                   
     }
@@ -154,7 +145,7 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func beginBatchFetch() {
         fetchingMore = true
-        print("Begin Batch Fetch")
+        print("Batch Fetching")
 // *** SPINNER FUNCTION ERROR [7]
 //        jokeTableView.reloadSections(IndexSet(integer: 1), with: .none)
 // *** SPINNER FUNCTION ERROR [7]

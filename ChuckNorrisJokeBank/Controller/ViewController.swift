@@ -22,10 +22,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
                 
                 // Make welcome picture display as a circle
-        //        welcomeImage.layer.borderWidth = 1
-        //        welcomeImage.layer.masksToBounds = false
-        //        welcomeImage.layer.borderColor = UIColor.black.cgColor
-        //        welcomeImage.layer.cornerRadius = 100
                 welcomeImage.layer.cornerRadius = welcomeImage.frame.width/2
                 welcomeImage.clipsToBounds = true
                 
@@ -58,7 +54,7 @@ class ViewController: UIViewController {
         buttonCount += 1
         print(buttonCount)
         if (buttonCount == 5) {
-            print("PROOF: Persistance Pays Off - YOU GOT THE JOB!!!")
+            print("PROOF: Persistance Pays Off - GIVE THIS MAN THE JOB!!!")
         }
         
     }

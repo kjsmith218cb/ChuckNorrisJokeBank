@@ -25,7 +25,6 @@ class ChuckNorrisJokeBankTests: XCTestCase {
         buttonCount += 1
     }
     
-
     override func setUp() {
         helloWorld = "hello world"
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -48,16 +47,18 @@ class ChuckNorrisJokeBankTests: XCTestCase {
 //    }
     
     // Learn about Unit Testing...
-    func testHelloWorld() {
-//        var helloWorld: String?
-//        XCTAssertNil(helloWorld)
-//
-//        helloWorld = "hello world"
-        // un/comment to show pass vs fail test
+    func testHellowWorldIsString() {
+        var helloWorld: String?
+        XCTAssertNil(helloWorld)
+    }
+
+    func testHelloWorldContent() {
+        // un-comment to show pass vs fail test
         XCTAssertEqual(helloWorld, "hello world")
 //        XCTAssertEqual(helloWorld, "hello worldx")
     }
     
+    // Try testing a function within one of my ViewControllers
     func testButtonCountIncrease() {
         buttonCount = 0
 //        buttonCountFunction()

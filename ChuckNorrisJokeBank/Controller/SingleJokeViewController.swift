@@ -31,14 +31,13 @@ class SingleJokeViewController: UIViewController, RandomJokeManagerDelegate {
                           
     func didUpdateRandomJoke(_ randomJokeManager: RandomJokeManager, randomJoke: String) {
         
-        print(randomJoke)
-        // Replace Occurences of bad punctuation
+        // Replace Occurences of 'bad/poor' punctuation in a JSON
         let replaceQuot = randomJoke.replacingOccurrences(of: "&quot;", with: "\"")
         // Found a joke stating he?s, but appears to be an error in the API as ' appears in other jokes and ? used correctly...
 //        let replaceQues = replaceQuot.replacingOccurrences(of: "?", with: "\'")
-                              
+        
+        // Send (puntuation error free) joke recieved to ViewController label
         DispatchQueue.main.async {
-//            self.jokeLabel.text = randomJoke
             self.randomJokeLabel.text = replaceQuot
         }
                               
