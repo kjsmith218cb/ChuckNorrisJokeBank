@@ -99,8 +99,18 @@
 
 #### CONTROLLER: ViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
-2. In your 'Button 1' IBActions enter 'self.performSegue(withIdentifier: "goToSingle", sender: self)'
-3. In your 'Button 2' IBActions enter 'self.performSegue(withIdentifier: "goToList", sender: self)'
+2. In your 'Button 1' IBActions enter 'perform segue to your 'goToSingle'
+```swift
+@IBAction func randomJokeButtonPressed(_ sender: UIButton) {
+    self.performSegue(withIdentifier: "goToSingle", sender: self)
+}
+```
+3. In your 'Button 2' IBActions enter perform segue to your 'goToList' identifier
+```swift
+@IBAction func jokeListButtonPressed(_ sender: UIButton) {
+    self.performSegue(withIdentifier: "goToList", sender: self)
+}
+```
 4. Button 3 has no specification and so does not require an action.
 5. You will now be sent to the designated ViewController when the button is pressed
 
@@ -108,7 +118,12 @@
 
 #### CONTROLLER: SingleJokeViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
-2. Add the dismiss code ('self.dismiss(animated: true, completion: nil)') to your buttons IBAction
+2. Add the dismiss code to your buttons IBAction
+```swift
+@IBAction func okButtonPressed(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
+}
+```
 3. Add RandomJokeManagerDelegate to your class
 4. Set RandomJokeManagerDelegate to .self
 5. Call the function to retrieve a random joke from the API (fetchRandomJoke)
