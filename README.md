@@ -145,7 +145,7 @@ func test() {
 *When adding the Label Object to the Table Cell, Make sure set constraints! or you could waste alot of time!*
 
 #### SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
-> If you would like to see the spinner in action you need to un-comment the code between
+> If you would like to see the spinner in action you need to un-comment the 7 areas of code between *** SPINNER FUNCTION ERROR [1-7]
 
 ```swift
 // *** SPINNER FUNCTION ERROR [1]
