@@ -174,13 +174,14 @@ var randomJokeArray = [String]()
 #### SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
 > If you would like to see the spinner in action you need to un-comment the 7 areas of code between *** SPINNER FUNCTION ERROR [1-7]
 
+**Change:**
 ```swift
 // *** SPINNER FUNCTION ERROR [1]
 //        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
 //        jokeTableView.register(loadingNib, forCellReuseIdentifier: "LoadingCell")
 // *** SPINNER FUNCTION ERROR [1]
 ```
-
+**To:**
 ```swift
 // *** SPINNER FUNCTION ERROR [1]
         let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
