@@ -149,7 +149,7 @@ ADD UNIT TESTS
 ![View Controller](./Screenshots/view-controller.png)
 ![Single Joke View Controller](./Screenshots/random-joke-view-controller.png)
 ![Joke List View Controller](./Screenshots/joke-list-view-controller.png)
-
+#### Example of text truncation for larger jokes
 ![Large Joke Text Reduction](./Screenshots/text-reduced-cell.png)
 
 # Brief
