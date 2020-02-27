@@ -25,7 +25,7 @@ struct RandomJokeManager {
     
     // Get data back from API call
     func performRequest(urlString: String) {
-        // 1. Create a URL
+        // 1. Use URL provided
         if let url = URL(string: urlString) {
             // 2. Create a URL Session
             let session = URLSession(configuration: .default)

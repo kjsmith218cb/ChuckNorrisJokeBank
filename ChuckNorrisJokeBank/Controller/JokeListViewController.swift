@@ -128,7 +128,6 @@ class JokeListViewController: UIViewController, UITableViewDelegate, UITableView
 //        }
 // *** SPINNER FUNCTION ERROR [6]
         
-        
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
