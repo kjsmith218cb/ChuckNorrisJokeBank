@@ -39,66 +39,67 @@ func test() {
 6. Add the created images to your Assets.xcassets within your project
 
 ### Set-up
-LaunchScreen.storyboard
+#### LaunchScreen.storyboard
 1. Add image Object and position to suit your design
 2. Set image in Attributes Inspector to 'Mission Statement'
 
-Create the MVC layout
-Add 3 new Groups (File > New > Group)
+#### Create the MVC layout
+**Add 3 new Groups (File > New > Group)**
 1. Model
 2. View
 3. Controller
 4. Move *.storyboard to View Group
 5. Move *.ViewController to Controller Group
 
-Create 2 new [UIViewController SubClass] files in the Controller Group (File > New > File > Coca Touch Class)
+#### Create 2 new [UIViewController SubClass] files in the Controller Group (File > New > File > Coca Touch Class)
 1. SingleJokeViewController.swift
 2. JokeListViewController.swift
 
-Add 2 new ViewController Objects to your Main.storyboard
-Give one a class (within Identity Inspector) of SingleJokeViewController
-Give the other a class of JokeListViewController
-(This now links your code to the 'Assistant' when viewing through Main.storybord)
+#### Add 2 new ViewController Objects to your Main.storyboard**
+1. Give one a class (within Identity Inspector) of SingleJokeViewController
+2. Give the other a class of JokeListViewController
+*(This now links your code to the 'Assistant' when viewing through Main.storybord)*
 
-Create Segues
-From View Controller Scene - Click on the ViewController icon [yellow symbol]
-Hold 'Control Button' and drag the blue line to one of the new view controllers created.
-Repeat this and drag to the other newly created view controller.
+#### Create Segues
+1. From View Controller Scene - Click on the ViewController icon [yellow symbol]
+2. Hold 'Control Button' and drag the blue line to one of the new view controllers created.
+3. Repeat this and drag to the other newly created view controller.
+4. Click on the 1st Segue arrow and from within the attributes inspector give the identifier the name 'goToSingle' (Present Modally)
+5. Click on the 2nd Segue arrow and from within the attributes inspector give the identifier the name 'goToList' (Present Modally)
 
-Click on the 1st Segue arrow and from within the attributes inspector give the identifier the name 'goToSingle' (Present Modally)
-Click on the 2nd Segue arrow and from within the attributes inspector give the identifier the name 'goToList' (Present Modally)
+#### Main.storyboard
+**SingleJokeViewController** - Will already appear over the first screen (ViewController) with part of the first screen still showing
 
-Main.storyboard
-SingleJokeViewController - Will already appear over the first screen (ViewController) with part of the first screen still showing
-JokeListViewController - To make this not appear as a pop-up message... Within the View Controller Attributes Inspector, set 'Transition Style' to 'Flip Horizontal' and set 'Presentation' to 'Full Screen'
+**JokeListViewController** - We need to make this appear as a pop-up message... 
+1. Within the View Controller Attributes Inspector set 'Transition Style' to 'Flip Horizontal' and set 'Presentation' to 'Full Screen'
 
-[VC] ViewController - Add: 2 image Objects, 1 label Object and 3 button Objects
-[VC] SingleJokeViewController - Add: 4 image Objects, 1 label Object and 1 button Object
-[VC] JokeListViewController - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
-[VC] JokeListViewController/TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
+**ViewController** - Add: 2 image Objects, 1 label Object and 3 button Objects
+**SingleJokeViewController** - Add: 4 image Objects, 1 label Object and 1 button Object
+**JokeListViewController** - Add: 1 image Object, 1 tableView Object (Add 1 prototype cell with 'identifier "Cell") and 1 button Object
+**JokeListViewController** TableView - Add: 1 label Object to the prototype cell and format the text to suit your design [refer to Co-op Bank App research]
 
 1. Position objects to suit your design [refer to Co-op Bank App research]
 2. Add the IBOutlets to corresponding ViewController file
 3. Add IBActions to corresponding ViewController file
 4. Set images in Attributes Inspectors to relevant images you created
 
-Create a new [UITableViewCell] files in the View Group (File > New > File > Coca Touch Class)
+Create a new UITableViewCell file in the View Group (File > New > File > Coca Touch Class)
 1. JokeCell - Used to format the text of the joke retrieved for displaying in our table
 
 Create 2 new Swift Files in your 'Model' group (File > New > File > Swift File)
 1. RandomJokeManagerJokeDelegate - Used to fetch a random joke from the API
 2. RandomJokeData
 
-MODEL: RandomJokeManagerDelegate
+#### MODEL: RandomJokeManagerDelegate
 1. Set protocol and functions we require to pass the data back to SingleJokeViewController or JokeListViewController
 2. Provide API address that we will use to fetch a random joke
 3. Perform a request to get hold of that random joke
 4. Decode the JSON Data ready to pass back
 
-MODEL: RandomJokeData
+#### MODEL: RandomJokeData
 1. Set struct format that will hold the joke returned from RandomJokeManagerDelegate
 
-CONTROLLER: ViewController.swift
+#### CONTROLLER: ViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
 2. In your 'Button 1' IBActions enter 'self.performSegue(withIdentifier: "goToSingle", sender: self)'
 3. In your 'Button 2' IBActions enter 'self.performSegue(withIdentifier: "goToList", sender: self)'
@@ -106,7 +107,7 @@ CONTROLLER: ViewController.swift
 5. You will now be sent to the designated ViewController when the button is pressed
 /You know have a 'Starting' view that provides links to 2 other views via the buttons coded with Segue's in steps 2 & 3
 
-CONTROLLER: SingleJokeViewController.swift
+#### CONTROLLER: SingleJokeViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
 2. Add the dismiss code ('self.dismiss(animated: true, completion: nil)') to your buttons IBAction
 3. Add RandomJokeManagerDelegate to your class
@@ -114,14 +115,16 @@ CONTROLLER: SingleJokeViewController.swift
 5. Call the function to retrieve a random joke from the API (fetchRandomJoke)
 6. Display the data returned to the UILabel on screen
 
-CONTROLLER: JokeListViewController.swift
+#### CONTROLLER: JokeListViewController.swift
 1. Edit the appearance of your IBOutlets to match your design [refer to Co-op Bank App research]
 2. Set the Table View's Prototype cell class to JokeCell (UITableViewCell created earlier)
 3. You will now be able to Control + Drag the Label Object from Main.storyboard to JokeCell.swift to create an IBOutlet
-VIEW: JokeCell.swift
+
+**VIEW: JokeCell.swift**
 4. Create a function that will be passed a joke in string format 'func myFunc (randomJoke: String)'
 5. Set the IBOutlet UILabel text to the joke received (ie. randomJoke)
-CONTROLLER: JokeListViewController.swift
+
+**CONTROLLER: JokeListViewController.swift**
 6. Add RandomJokeManagerDelegate, UITableViewDelegate & UITableViewDataSource to your class
 7. Set RandomJokeManager & TableView delegates equal to .self
 8. Create a loop that we can use to call and retrieve 'x' amount of jokes each time its requested
@@ -137,9 +140,9 @@ CONTROLLER: JokeListViewController.swift
 18. SPINNER FUNCTION IS COMMENTED OUT AS ONLY WORKS ONCE THEN CRASHES - WORKING ON A FIX.
 /Add Label! ('Make sure set constraints!!!' wasted time!!! :()
 
-SET CONSTRAINTS & TEST ON DEVICES...
+### SET CONSTRAINTS & TEST ON DEVICES...
 
-ADD UNIT TESTS
+### ADD UNIT TESTS
 1. Within your project (under TARGETS) add 'Unit Testing Bundle'
 2. Enter your tests within the swift file created.
 
