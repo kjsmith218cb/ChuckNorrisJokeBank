@@ -31,7 +31,7 @@
 
 ### Set-up
 #### LaunchScreen.storyboard
-1. Add image Object and position to suit your design
+1. Add an image Object and position to suit your design
 2. Set image in Attributes Inspector to 'Mission Statement'
 
 #### Create the MVC layout
@@ -46,7 +46,7 @@
 1. SingleJokeViewController.swift
 2. JokeListViewController.swift
 
-#### Add 2 new ViewController Objects to your Main.storyboard**
+#### Add 2 new ViewController Objects to your Main.storyboard
 1. Give one a class (within Identity Inspector) of SingleJokeViewController
 2. Give the other a class of JokeListViewController
 *(This now links your code to the 'Assistant' when viewing through Main.storybord)*
