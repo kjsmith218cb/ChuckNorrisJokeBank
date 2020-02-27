@@ -125,6 +125,9 @@
 }
 ```
 3. Add RandomJokeManagerDelegate to your class
+```swift
+class SingleJokeViewController: UIViewController, RandomJokeManagerDelegate {
+```
 4. Set RandomJokeManagerDelegate to .self
 5. Call the function to retrieve a random joke from the API (fetchRandomJoke)
 6. Display the data returned to the UILabel on screen
